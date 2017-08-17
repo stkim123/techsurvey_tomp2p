@@ -10,7 +10,9 @@ public class Peer_Storing
 		P2PManager dns = new P2PManager(peerID);
 		for(int i = 0; i < numOfMsg ; i++)
 		{
-			dns.store("value:#"+ i);
+			String value = "value:#"+ i; 
+			dns.store(value);
+			System.out.println("store :"+ value);
 			try
 			{
 				Thread.sleep(1000);
