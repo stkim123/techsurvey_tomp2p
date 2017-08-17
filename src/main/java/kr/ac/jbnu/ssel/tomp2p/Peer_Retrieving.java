@@ -13,11 +13,16 @@ public class Peer_Retrieving
 		P2PManager dns = new P2PManager(peerID);
 		
 		System.out.println(" Value:" + dns.get());
-		Iterator<Data> data = dns.getAll();
-		while(data.hasNext())
+		
+		for(int i = 0 ; i < 100 ; i++)
 		{
-			String value = (String)data.next().object();
-			System.out.println("values:"+ value);
+			System.out.println(i + ")=====================================");
+			Iterator<Data> data = dns.getAll();
+			while(data.hasNext())
+			{
+				String value = (String)data.next().object();
+				System.out.println("values:"+ value);
+			}
 		}
 	}
 }
