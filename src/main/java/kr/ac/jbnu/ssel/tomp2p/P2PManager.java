@@ -44,7 +44,7 @@ public class P2PManager
     }
 
     public void store(String value) throws IOException {
-        peer.put(Number160.createHash(DHT_KEY)).data(new Data(value)).start().awaitUninterruptibly();
+        peer.add(Number160.createHash(DHT_KEY)).data(new Data(value)).start().awaitUninterruptibly();
     }
     
     public Iterator<Data> getAll()
